@@ -24,7 +24,7 @@
         var staffdiscountContent = document.createTextNode("Staff Discount Price = " + staffPrice); 
         staffdiscount.appendChild(staffdiscountContent); //add the text node to the newly created div. 
 
-        var currentDiv = document.getElementById("text1"); 
+        var currentDiv = document.getElementById("staffdiv"); 
         document.body.insertBefore(staffdiscount, currentDiv); 
 
 
