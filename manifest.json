@@ -1,6 +1,6 @@
 {
-  "name": "Hello World!",
-  "description": "My first Chrome App.",
+  "name": "talculator",
+  "description": "Staff discount calculator for Takealot",
   "version": "0.1",
   "manifest_version": 2,
   "app": {
