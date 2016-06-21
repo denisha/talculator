@@ -2,6 +2,16 @@
   "name": "TALculator",
   "description": "Staff discount calculator for Takealot",
   "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+  {
+  "matches": ["https://admin.takealot.com/s3cret/edit/editproduct.php/*"],
+  "js": ["contentscript.js"]
+  }
+],
+
   "manifest_version": 2,
 
   "app": {
@@ -10,4 +20,7 @@
     }
   },
   "icons": { "16": "calculator-16.png", "128": "calculator-128.png" }
+
+    
+
 }

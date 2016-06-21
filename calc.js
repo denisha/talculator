@@ -2,8 +2,8 @@
     document.getElementById("calcBtn").onclick = function() {Calculate()}; 
 
     function Calculate() {
-    	//var getcostPrice = document.getElementById('CostPrice').value;;
-    	var getcostPrice = 10;
+    	//var getcostPrice = document.getElementById('CostPrice').value;
+    	var getCostPrice = 10;
 
     	//var getSellingPrice = document.getElementById('Price').value;
     	var getSellingPrice = 20.00;
@@ -13,19 +13,18 @@
         var sportDiscount;
         //need to add marketplace and liquor conditional statements
 
-        staffPrice = (getcostPrice * discount).toFixed(2);
+        sellingPrice = getSellingPrice.toFixed(2);
+        costPrice = getCostPrice.toFixed(2);
+
+        staffPrice = (getCostPrice * discount).toFixed(2);
+        savings = (getSellingPrice - staffPrice).toFixed(2);
        // staffPriceSport = getcostPrice * sportDiscount;
 
 
-     //   document.write ("Original Selling Price = " + getSellingPrice.toFixed(2));
-
-        //var staffdiscount = document.createElement('div');
-        var staffdiscount = document.createElement("div"); 
-        var staffdiscountContent = document.createTextNode("Staff Discount Price = " + staffPrice); 
-        staffdiscount.appendChild(staffdiscountContent); //add the text node to the newly created div. 
-
-        var currentDiv = document.getElementById("staffdiv"); 
-        document.body.insertBefore(staffdiscount, currentDiv); 
+        document.getElementById("staffdiv").innerHTML = "  Staff Price : R " + staffPrice; 
+        document.getElementById("sellingdiv").innerHTML = "Original Price : R " + sellingPrice; 
+        document.getElementById("costdiv").innerHTML = "   Cost Price : R " + costPrice;
+        document.getElementById("savediv").innerHTML = "   YOU SAVE : R " + savings;
 
 
     }
